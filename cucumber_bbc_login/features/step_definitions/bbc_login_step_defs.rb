@@ -73,3 +73,18 @@ end
 Then("I receive an error for password is too long") do
   expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error8
 end
+
+# No fields are filled
+Given("I input no username details") do
+  @bbc_site.bbc_signinpage.fill_in_username('')
+end
+
+Given("I input no password details") do
+  @bbc_site.bbc_signinpage.fill_in_password('')
+end
+
+Then("I receive an error that both fields are missing") do
+  expect(@bbc_site.bbc_signinpage.error_message_general).to eq @bbc_site.bbc_signinpage.error9
+  expect(@bbc_site.bbc_signinpage.error_message_username).to eq @bbc_site.bbc_signinpage.error10
+  expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error10
+end

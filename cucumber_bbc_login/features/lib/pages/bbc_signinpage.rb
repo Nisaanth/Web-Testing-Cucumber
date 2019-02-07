@@ -1,7 +1,7 @@
 require 'capybara/dsl'
 
 class BbcSignInpage
-  attr_accessor :error1, :error2, :error3, :error4, :error5, :error6, :error7
+  attr_accessor :error1, :error2, :error3, :error4, :error5, :error6, :error7, :error8
   include Capybara::DSL
   # page object
   USERNAME_FIELD_ID = 'user-identifier-input'
@@ -9,6 +9,7 @@ class BbcSignInpage
   SUBMIT_BUTTON_ID = 'submit-button'
   ERROR_MESSAGE_ID = 'form-message-username'
   ERROR_MESSAGE_PASSWORD_ID = 'form-message-password'
+  ERROR_MESSAGE_GENERAL_ID = 'form-message-general'
   
   def initialize
     @error1 = 'Sorry, we can’t find an account with that email. You can register for a new account or get help here.'
@@ -18,6 +19,9 @@ class BbcSignInpage
     @error5 = "Sorry, that email doesn’t look right. Please check it's a proper email."
     @error6 = "Sorry, that password isn't valid. Please include something that isn't a letter."
     @error7 = "Sorry, that password isn't valid. Please include a letter."
+    @error8 = "Sorry, that password is too long. It can't be more than 50 characters."
+    @error9 = "Sorry, those details don't match. Check you've typed them correctly."
+    @error10 = "Something's missing. Please check and try again."
   end
 
   def fill_in_username(username)
@@ -38,6 +42,10 @@ class BbcSignInpage
 
   def error_message_password
     find(:id, ERROR_MESSAGE_PASSWORD_ID).text
+  end
+
+  def error_message_general
+    find(:id, ERROR_MESSAGE_GENERAL_ID).text
   end
 
 end

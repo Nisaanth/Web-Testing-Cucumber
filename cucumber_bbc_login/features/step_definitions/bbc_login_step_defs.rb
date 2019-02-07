@@ -58,3 +58,11 @@ Then("I receive an error for invalid password with only letters") do
 end
 
 # Password with only numbers is invalid
+
+Given("I input incorrect password details with only numbers") do
+  @bbc_site.bbc_signinpage.fill_in_password('12345678')
+end
+
+Then("I receive an error for invalid password with only numbers") do
+  expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error7
+end

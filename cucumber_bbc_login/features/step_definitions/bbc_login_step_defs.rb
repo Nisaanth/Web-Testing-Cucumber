@@ -29,14 +29,14 @@ Then("I receive an error for password too short") do
   expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error2
 end
 
-# # Password does not match 
-# Given("I input right username details") do
-#   @bbc_site.bbc_signinpage.fill_in_username('nomail@nomail.com')
-# end
+# Password does not match 
+Given("I input right username details") do
+  @bbc_site.bbc_signinpage.fill_in_username('nomail@nomail.com')
+end
 
-# Then("I receive an error for password does not match") do
-#   expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error3 | @bbc_site.bbc_signinpage.error4
-# end
+Then("I receive an error for password does not match") do
+  expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error3 | @bbc_site.bbc_signinpage.error4
+end
 
 # Username is invalid
 Given("I input incorrect and invalid username details") do

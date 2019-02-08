@@ -14,12 +14,12 @@ Feature: BBC Login
     When I try to login
     Then I receive an error for password too short
 
-  # Scenario: Inputting incorrect right username with incorrect password and credentials shows an error
-  #   Given I access the bbc login page
-  #   And I input right username details
-  #   And I input incorrect password details
-  #   When I try to login
-  #   Then I receive an error for password does not match
+  Scenario: Inputting incorrect right username with incorrect password and credentials shows an error
+    Given I access the bbc login page
+    And I input right username details
+    And I input incorrect password details
+    When I try to login
+    Then I receive an error for password does not match
 
   Scenario: Inputting incorrect invalid username and credentials shows an error
     Given I access the bbc login page

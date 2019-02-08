@@ -47,5 +47,5 @@ class BbcSignInpage
   def error_message_general
     find(:id, ERROR_MESSAGE_GENERAL_ID).text
   end
-
+  
 end

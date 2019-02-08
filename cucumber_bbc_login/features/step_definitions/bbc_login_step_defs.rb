@@ -74,7 +74,7 @@ Then("I receive an error for password is too long") do
   expect(@bbc_site.bbc_signinpage.error_message_password).to eq @bbc_site.bbc_signinpage.error8
 end
 
-# No fields are filled
+# No fields are filled 
 Given("I input no username details") do
   @bbc_site.bbc_signinpage.fill_in_username('')
 end

@@ -1,6 +1,5 @@
 require 'capybara/dsl'
 
-
 class BbcHomepage
   include Capybara::DSL
 

@@ -18,18 +18,9 @@ Created a POM (Page Object Model) for the the bbc website sign in page.  Used Cu
 * Gherkin syntax
 
 ## How to download
-1. To download a copy click on 'clone or download' and you can download it as a zip file.
-2. Unzip the file
-3. Open in text editor 
-4. Install gems if required using 'bundle init'
-
-## Alternative
-1. If you choose to clone it go into your terminal.
-2. Create a directory
-3. Type git clone followed by the link obtained via opening 'clone or download'
-4. This will make a copy to the directory you're in.
-5. Go to that directory
-6. Open file
+1. Git clone 'https://github.com/Nisaanth/Web-Testing-Cucumber'
+2. Run 'bundle' in the terminal to install the gems
+3. Run 'cucumber'
 
 ## How to Use 
 1. Create lib folder
